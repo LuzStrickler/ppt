@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>Piedra, Papel, Tijera</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            border: 5px solid rgba(48, 49, 51, 1);;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid #000;
+        }
+
+        .left-image{
+            max-width: 200px;
+            height: auto;
+        }
+        .right-image {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .center {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #000;
+        }
+
+        .options {
+            margin-top: 20px;
+        }
+
+        .options p {
+            font-size: 64px;
+            font-family: 'Archivo Black', sans-serif;
+            margin: 5px 0;
+            color: rgba(48, 49, 51, 1);;
+        }
+
+        .computadora{
+            font-size: 30px;
+            font-family: 'Archivo Black', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .jugador{
+            font-size: 30px;
+            font-family: 'Archivo Black', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .puntos{
+            font-size: 25px;
+            font-family: 'Archivo Black', sans-serif;
+            color: rgba(48, 49, 51, 1);
+            text-align: center;
+        }
+
+        .rectangles {
+            background-color:  rgba(48, 49, 51, 1);
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .small-image {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        h5{
+            font-size: 15px;
+            text-align: center;
+            font-family: 'Archivo Black', sans-serif;
+            color: rgba(48, 49, 51, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left">
+                <img src="img/mickey.png" alt="Imagen 1" class="left-image">
+            </div>
+            <div class="center">
+                <div class="options">
+                    <p>PIEDRA</p>
+                    <p>PAPEL</p>
+                    <p>TIJERA</p>
+                </div>
+            </div>
+            <div class="right">
+                <img src="img/minnie.png" alt="Imagen 2" class="right-image">
+            </div>
+        </div>
+        <h4 class="puntos">Resultado:</h4>
+        <div id="resultado">
+            <h5 class="mensaje" id="mensaje"></h5>
+        </div>
+        <div class="rectangles">
+            <div class="rectangle 1">
+                <h3 class="jugador">Jugador</h3>
+                <div style="float: left; width: 32%;"><div onclick="jugada('piedra');" id="piedra"><img src="img/piedra.png" alt="Imagen 3" class="small-image"></div></div>
+                <div style="float: left; width: 32%;"><div onclick="jugada('papel');" id="papel"><img src="img/papel.png" alt="Imagen 4" class="small-image"></div></div>
+                <div style="float: left; width: 32%;"><div onclick="jugada('tijera');" id="tijera"><img src="img/tijera.png" alt="Imagen 5" class="small-image"></div></div>
+            </div>
+            <div class="rectangle 2">
+                <h3 class="computadora">Computadora</h3>
+                <div style="float: left; width: 32%;"><img src="img/piedra.png" alt="Imagen 6" class="small-image"></div>
+                <div style="float: left; width: 32%;"><img src="img/papel.png" alt="Imagen 7" class="small-image"></div>
+                <div style="float: left; width: 32%;"> <img src="img/tijera.png" alt="Imagen 8" class="small-image"></div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
